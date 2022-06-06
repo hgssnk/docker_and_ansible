@@ -1,0 +1,21 @@
+# Amazon EC2
+FROM amazonlinux:latest
+
+# SSHサーバ構築
+RUN yum -y install openssh-server
+
+# 鍵作成
+RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
+RUN ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa
+
+# rootログイン許可
+RUN sed -ri 's/^#PermitEmptyPasswords no/PermitEmptyPasswords yes/' /etc/ssh/sshd_config
+
+# rootパスワード設定
+RUN echo "root:" | chpasswd
+
+# 22ポート解放
+EXPOSE 22
+
+# sshd起動
+CMD ["/usr/sbin/sshd", "-D"]

@@ -1,0 +1,25 @@
+version: '3'
+services:
+  # Ansibleコンテナ
+  ansible:
+    container_name: ansible 
+    build:
+      context: .
+      dockerfile: Dockerfile_ansible
+    tty: true
+    working_dir: "/tmp/works"
+    volumes:
+      - ../mountpoint:/tmp/works
+  # ターゲットコンテナ
+  target_server01:
+    container_name: target01
+    build:
+      context: .
+      dockerfile: Dockerfile_targets
+    tty: true
+  target_server02:
+    container_name: target02
+    build:
+      context: .
+      dockerfile: Dockerfile_targets
+    tty: true

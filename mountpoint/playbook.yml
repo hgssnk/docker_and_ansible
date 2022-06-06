@@ -1,0 +1,8 @@
+- hosts: targets
+  tasks:
+  - name: "command execution"
+    shell: uname -a
+    register: result
+  - name: "check the result"
+    debug:
+      msg: "{{ result.stdout }}"

@@ -1,0 +1,14 @@
+FROM ubuntu:latest
+
+# SSHフィンガープリント確認の回避
+ENV ANSIBLE_HOST_KEY_CHECKING False
+
+RUN apt update && \
+    apt install -y ansible && \
+    # 雑多なパッケージ類
+    apt install -y vim iputils-ping net-tools
+
+# pythonの警告回避(無くても動く)
+RUN echo "[defaults]\ninterpreter_python=auto_silent" > /root/.ansible.cfg
+
+CMD /bin/bash
