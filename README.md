@@ -1,11 +1,11 @@
 # Docker_and_Ansible
+![img](./img.png)
 - Ansibleコンテナとターゲットコンテナを生成
 - Ansibleコンテナからターゲットコンテナに対してplaybookを実行
-![img](./img.png)
 
 ## 手順
 ```bash
-git clone 
+git clone https://github.com/hgssnk/docker_and_ansible.git
 cd dockerfiles
 docker-compose up -d --build
 docker exec -it ansible /bin/bash
