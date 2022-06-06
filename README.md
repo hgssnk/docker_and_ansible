@@ -1,7 +1,7 @@
 # Docker_and_Ansible
-![img](./img.png)
 - Ansibleコンテナとターゲットコンテナを生成
 - Ansibleコンテナからターゲットコンテナに対してplaybookを実行
+![img](./img.png)
 
 ## 手順
 ```bash
