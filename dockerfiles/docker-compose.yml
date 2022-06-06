@@ -13,12 +13,14 @@ services:
   # ターゲットコンテナ
   target_server01:
     container_name: target01
+    hostname: target01
     build:
       context: .
       dockerfile: Dockerfile_targets
     tty: true
   target_server02:
     container_name: target02
+    hostname: target02
     build:
       context: .
       dockerfile: Dockerfile_targets

@@ -1,7 +1,7 @@
 - hosts: targets
   tasks:
   - name: "command execution"
-    shell: uname -a
+    shell: uname -nr
     register: result
   - name: "check the result"
     debug:
