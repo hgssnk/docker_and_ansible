@@ -1,6 +1,5 @@
 # [Docker_and_Ansible](https://pro-broccoli.com/2022/06/07/docker_and_ansible/)
 ![img](./img.png)  
-[記事](https://pro-broccoli.com/2022/06/07/docker_and_ansible/)
 - Ansibleコンテナとターゲットコンテナを生成
 - Ansibleコンテナからターゲットコンテナに対してplaybookを実行
 
