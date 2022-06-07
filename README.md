@@ -6,7 +6,7 @@
 ## 手順
 ```bash
 git clone https://github.com/hgssnk/docker_and_ansible.git
-cd dockerfiles
+cd docker_and_ansible/dockerfiles
 docker-compose up -d --build
 docker exec -it ansible /bin/bash
 ansible-playbook -i hosts playbook.yml
